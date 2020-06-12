@@ -32,6 +32,7 @@ Route::get('/', function () {
 
 Route::view('/about', 'about')->name('about');
 
-Route::view('/portafolio', 'portafolio')->name('portafolio');
+// Route::view('/portafolio', 'portafolio')->name('portafolio');
+Route::get('/portafolio', 'PortfolioController@index')->name('portfolio');
 
 Route::view('/contact', 'contact')->name('contact');

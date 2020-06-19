@@ -5,7 +5,7 @@
 @section('content')
     <h1>Portafolio</h1>
 
-    @for()
+    {{-- @for()
     @endfor
 
     @while()
@@ -20,7 +20,7 @@
     @else
     @endif
 
-    @isset()
+    @isset() --}}
 
     <ul>
         @forelse($portfolio as $item)

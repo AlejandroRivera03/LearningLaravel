@@ -12,6 +12,8 @@ class MessagesController extends Controller
             'email'     => 'required|email',
             'subject'   => 'required',
             'message'   => 'required|min:3'
+        ], [
+            'name.required' => __('I need your name'), // Custom messages
         ]);
 
         return 'Datos Validados';

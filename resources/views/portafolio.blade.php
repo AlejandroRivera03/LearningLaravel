@@ -23,10 +23,15 @@
     @isset() --}}
 
     <ul>
-        @forelse($portfolio as $item)
-            <li>{{ $item['title'] }}
+        @forelse($projects as $item)
+            <li>
+                {{ $item['title'] }}<br>
+                <small>{{ $item['description'] }}</small>
+            </li>
         @empty
             <li>No hay proyectos para mostrar</li>
         @endforelse
+
+        {{ $projects->links() }}
     </ul>
 @endsection

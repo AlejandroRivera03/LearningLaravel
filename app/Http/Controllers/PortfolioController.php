@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Project;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -12,15 +13,10 @@ class PortfolioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $portfolio = [
-            ['title' => 'Proyecto #1'],
-            ['title' => 'Proyecto #2'],
-            ['title' => 'Proyecto #3'],
-            ['title' => 'Proyecto #4'],
-        ];
-
-        return view('portafolio', compact('portfolio'));
+    {   
+        return view('portafolio', [
+            'projects' => Project::latest()->paginate(), // 15 elements default
+        ]);
     }
 
     /**

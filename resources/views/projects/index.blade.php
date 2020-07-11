@@ -25,7 +25,7 @@
     <ul>
         @forelse($projects as $item)
             <li>
-                <a href="{{route('portfolio.show', $item)}}">{{ $item['title'] }}</a>
+                <a href="{{route('projects.show', $item)}}">{{ $item['title'] }}</a>
                 {{-- <br><small>{{ $item['description'] }}</small> --}}
             </li>
         @empty
